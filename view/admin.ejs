@@ -1,0 +1,15 @@
+  <%- include ("./partial/all.ejs") %>
+   <!-- Admin View -->
+      <!-- ================= SECTION 2: AUTH & ADMIN ================= -->
+    <h2 class="section-title">🔐 Auth & Admin Routes</h2>
+    <div class="card get">
+        <div class="route-header">
+            <span class="badge get">GET</span>
+            <span class="route-path">/admin</span>
+        </div>
+        <p>Access Admin Control Panel.</p>
+        <form action="/admin" method="GET">
+            <button type="submit">Fetch Admin Form</button>
+        </form>
+    </div>
+    <h3><%=data%></h3>
