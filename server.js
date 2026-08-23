@@ -16,7 +16,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.set("view engine","ejs")
-app.set("views","view")
+app.set("views", path.join(__dirname, 'view'))
 
 app.use((err, req, res, next) => {
   console.error(err);
@@ -36,6 +36,10 @@ if(err instanceof multer.MulterError ){
 // }
 })
 app.use('/notes',router)
+app.get('/', (req, res) => {
+  res.send('Hello World! My backend is working!');
+});
+
 
 
 app.listen(PORT,async()=>{
