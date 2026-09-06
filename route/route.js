@@ -30,7 +30,7 @@ router.post('/login',loginForm)
 
 router.post('/image/single',authorization,adminAuth,multerToUpload.single("img"),toUpload)
 router.post('/image/many',authorization,adminAuth,multerToUpload.array("img",3),multipleUpload)
-router.post('/image/fromDifferent',authorization,adminAuth,multerToUpload.fields([{name:"img",maxCount:3},{name:"img2",maxCount:3}]),toUpload)
-router.post('/image/none',authorization,adminAuth,multerToUpload.none(),toUpload)
+// router.post('/image/fromDifferent',authorization,adminAuth,multerToUpload.fields([{name:"img",maxCount:3},{name:"img2",maxCount:3}]),toUpload)
+// router.post('/image/none',authorization,adminAuth,multerToUpload.none(),toUpload)
 
 module.exports=router
