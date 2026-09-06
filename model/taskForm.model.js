@@ -15,7 +15,13 @@ const taskFormSchema=new mongoose.Schema({
     dateToAccomplish:{
         type:Date,
         default:Date.now
-    }
+    },
+        byWhom:{
+            type:mongoose.Schema.Types.ObjectId,
+    
+            ref:"user",
+            required:true
+        }
 },{timestamps:true})
 const taskForm=mongoose.model('taskForm',taskFormSchema)
 

@@ -12,7 +12,7 @@ const DB_Connection = mongoose.connect(DB_URL)
        return 'connected';
    })
    .catch((err) => {
-       console.error('MongoDB connection error ❌:', err.message);
+       console.error('MongoDB connection error ❌:',err.message);
        throw err;
    });
 
